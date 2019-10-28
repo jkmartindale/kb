@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
 show_downloads: false
