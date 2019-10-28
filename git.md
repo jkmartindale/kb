@@ -27,7 +27,7 @@ Now go back to writing your crappy code, but in the right branch this time.
 git checkout chores/fix-my-sins
 ```
 
-## Find the .git folder
+### Find the .git folder
 Useful for when your classmates aren't paying attention in class, decide that
 they know git better than the professor teaching them git, and then they do an
 oopsie woopsie and make nested git repositories (that aren't submodules). This
