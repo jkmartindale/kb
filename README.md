@@ -5,7 +5,6 @@ Code snippet library and brief technical documentation.
 <!--{% endcomment %}-->
 {% comment %}
 <!--{% endcomment %}
-# Entries
 <div id="entries-list">
 </div>
 

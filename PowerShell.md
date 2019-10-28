@@ -1,5 +1,3 @@
-# PowerShell
-
 Change the "Date Modified" property of a file
 ```powershell
 # YYYY, MM, DD
