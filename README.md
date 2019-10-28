@@ -15,7 +15,7 @@ Code snippet library and brief technical documentation.
         document.getElementById('entries-list').innerHTML = 
             '<ul>'
             + data
-                .filter(file => file.name.endsWith('.md') && file.name != 'README.md')
+                .filter(file => file.name.endsWith('.md') && file.name != 'README.md' && file.name != '404.md')
                 .map(file => `<li><a href="${file.name.slice(0, -3)}">${file.name.slice(0, -3)}</a></li>`)
                 .join('')
             + '</ul>';
