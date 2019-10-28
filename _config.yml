@@ -3,3 +3,6 @@ plugins:
   - jekyll-sitemap
 show_downloads: false
 theme: jekyll-theme-primer
+twitter:
+  card: summary
+  username: jkmartindale
