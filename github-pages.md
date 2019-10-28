@@ -1,4 +1,8 @@
 ### Resources
+- [Liquid template tags and filters](https://shopify.github.io/liquid/)
+- [Jekyll-provided filters](https://jekyllrb.com/docs/liquid/filters/)
+- [Jekyll-provided tags](https://jekyllrb.com/docs/liquid/tags/)
+- [Jekyll variables](https://jekyllrb.com/docs/variables/)
 - [Plugins available](https://pages.github.com/versions/)
 - [Syntax highlighter language names](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
 
