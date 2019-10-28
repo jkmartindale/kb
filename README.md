@@ -1,2 +1,3 @@
 # kb
-Code snippet library and small technical documentation
+
+Code snippet library and brief technical documentation.
