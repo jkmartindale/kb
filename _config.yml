@@ -1,4 +1,6 @@
 plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-sitemap
 show_downloads: false
-theme: jekyll-theme-hacker
+theme: jekyll-theme-primer
