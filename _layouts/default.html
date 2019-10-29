@@ -18,7 +18,10 @@
 
       {% if site.github.private != true and site.github.license %}
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-          {% github_edit_link "Edit this page" %} // Maintained by <a href="https://twitter.com/jkmartindale" target="_blank">James Martindale</a>
+        {% github_edit_link "Edit this page" %} //
+        Maintained by <a href="{{ site.github.owner.blog | default: {{ site.github.owner_url }} }}" target="_blank">
+          {{ site.github.owner.name | default: site.github.owner_name }}
+        </a>
       </div>
       {% endif %}
     </div>
