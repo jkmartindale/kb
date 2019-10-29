@@ -1,4 +1,4 @@
-# git
+# Git
 
 ### Delete the last n commits
 ```shell

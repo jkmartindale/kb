@@ -1,4 +1,4 @@
-# windows
+# Windows
 
 ### Shortcut to Windows Store app
 Open the Applications folder, by typing `shell:AppsFolder` into the Windows
