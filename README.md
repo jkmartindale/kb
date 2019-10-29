@@ -8,14 +8,9 @@ You can browse repository contents here on GitHub.com, but https://jkmartindale.
 {% comment %}
 <!--{% endcomment %}
 Code snippet library and brief technical documentation.
+
 <p></p>
-<ul>
-  {% for page in site.pages %}
-    {% if page.title %}
-      <li><a href="{{ page.url | split: ".html" | first | relative_url }}">{{ page.title | slugify }}</a></li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include entries.html %}
 
 {% comment %}-->
 {% endcomment %}
