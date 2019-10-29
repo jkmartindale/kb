@@ -9,22 +9,13 @@ You can browse repository contents here on GitHub.com, but https://jkmartindale.
 <!--{% endcomment %}
 Code snippet library and brief technical documentation.
 <p></p>
-<div id="entries-list">
-</div>
-
-<script>
-  (async () => {
-    const response = await fetch('https://api.github.com/repos/jkmartindale/kb/contents/');
-    const data = await response.json();
-    document.getElementById('entries-list').innerHTML = 
-      '<ul>'
-      + data
-        .filter(file => file.name.endsWith('.md') && file.name != 'README.md' && file.name != '404.md')
-        .map(file => `<li><a href="${file.name.slice(0, -3)}">${file.name.slice(0, -3)}</a></li>`)
-        .join('')
-      + '</ul>';
-  })()
-</script>
+<ul>
+  {% for page in site.pages %}
+    {% if page.title %}
+      <li><a href="{{ page.url | split: ".html" | first | relative_url }}">{{ page.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
 {% comment %}-->
 {% endcomment %}
