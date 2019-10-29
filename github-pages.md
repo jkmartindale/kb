@@ -1,4 +1,4 @@
-## github-pages
+# github-pages
 
 ### Resources
 - [Liquid template tags and filters](https://shopify.github.io/liquid/)
