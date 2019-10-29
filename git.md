@@ -29,6 +29,15 @@ Now go back to writing your crappy code, but in the right branch this time.
 git checkout chores/fix-my-sins
 ```
 
+### Reset to remote HEAD
+Alright so you gone and messed everything up and want to just go back to the way things were on your remote? Sure you could delete your local repository and re-clone like a *chump* or instead you could do this pro gamer move:
+```shell
+# Make sure you have an updated copy of whatever remote branch you want to reset to
+git fetch origin master
+# Reset
+git reset --hard origin/master
+```
+
 ### Find the .git folder
 Useful for when your classmates aren't paying attention in class, decide that
 they know git better than the professor teaching them git, and then they do an
