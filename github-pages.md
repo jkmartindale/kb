@@ -37,3 +37,16 @@ Visitors to the markdown file on GitHub.com will see the following at the bottom
 ```
 {% endraw %}
 So this method isn't perfect, but it's much less distracting than before.
+
+### Hide the first heading
+Sometimes you want page titles to be programmically generated because you're a lazy typer and setting front matter makes your document look ugly on GitHub.com. You can edit a theme to display the right title but then plugins like [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) will use `page.title` for other things you can't control, and that sucks.
+
+GitHub Pages has the plugin [jekyll-titles-from-headings](https://github.com/benbalter/jekyll-titles-from-headings), which sets the title based on the first Markdown heading it sees. That's great except for when the theme already displays the page title so having a heading in addition to that is redundant and dumb.
+
+Good thing the plugin has an option to strip out the heading it used as a title. Just add this to your `_config.yml`:
+```yaml
+titles_from_headings:
+  strip_title: true
+```
+
+This option is how this repository can display in-markdown page titles on GitHub.com but only show them in the page header on GitHub Pages.
