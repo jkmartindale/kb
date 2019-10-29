@@ -12,7 +12,7 @@ Code snippet library and brief technical documentation.
 <ul>
   {% for page in site.pages %}
     {% if page.title %}
-      <li><a href="{{ page.url | split: ".html" | first | relative_url }}">{{ page.title }}</a></li>
+      <li><a href="{{ page.url | split: ".html" | first | relative_url }}">{{ page.title | slugify }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
