@@ -13,7 +13,7 @@ There's lots of cases where content (such as scripts) won't be rendered properly
 
 Instead of having to maintain two different branches of content or just being content with ugly unrendered content on GitHub.com, do this:
 <!-- {% raw %} -->
-```md
+```liquid
 <!--{% comment %}-->
 # GitHub.com
 
