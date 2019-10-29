@@ -12,7 +12,7 @@
 There's lots of cases where content (such as scripts) won't be rendered properly on GitHub.com but will be rendered on GitHub Pages. Maybe you want to direct people from GitHub.com to GitHub pages, but don't want that text to display on the GitHub Pages version.
 
 Instead of having to maintain two different branches of content or just being content with ugly unrendered content on GitHub.com, do this:
-{% raw %}
+<!-- {% raw %} -->
 ```md
 <!--{% comment %}-->
 # GitHub.com
@@ -35,7 +35,7 @@ Visitors to the markdown file on GitHub.com will see the following at the bottom
 
 {% endcomment %}
 ```
-{% endraw %}
+<!-- {% endraw %} -->
 So this method isn't perfect, but it's much less distracting than before.
 
 ### Hide the first heading
@@ -50,3 +50,16 @@ titles_from_headings:
 ```
 
 This option is how this repository can display in-markdown page titles on GitHub.com but only show them in the page header on GitHub Pages.
+
+### List of pages
+<!-- {% raw %} -->
+```liquid
+<ul>
+  {% for page in site.pages %}
+    {% if page.title %}
+      <li><a href="{{ page.url | split: ".html" | first | relative_url }}">{{ page.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+```
+<!-- {% endraw %} -->
