@@ -1,3 +1,5 @@
+## git
+
 ### Delete the last n commits
 ```shell
 git reset --hard HEAD~n
