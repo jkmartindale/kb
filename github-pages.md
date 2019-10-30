@@ -1,4 +1,5 @@
-# Jekyll + Github Pages
+# Github Pages
+These entries are written for the GitHub Pages environment but some apply to Jekyll in general.
 
 ### Resources
 - [Liquid template tags and filters](https://shopify.github.io/liquid/)
