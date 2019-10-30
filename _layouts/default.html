@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <title>{% if page.title %}{{ page.title }} // kb{% else %}kb // {{ site.github.project_tagline }}{% endif %}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% unless page.path == "404.md" %}
-      {% seo %}
+    {% capture description %}{% if page.title %}{{ page.title }} code{% else %}Code{% endif %} snippets and technical tricks curated by James Martindale.{% endcapture %}
+    <meta property="description" content="{{ description }}">
+    <meta property="og:author" content="{{ site.github.owner.name | default: site.github.owner.login }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ site.github.owner_gravatar_url }}">
+    <meta property="og:locale" content="{{ seo_tag.page_lang | replace:'-','_' }}">
+    <meta property="og:url" content="{{ seo_tag.canonical_url }}">
+    <meta property="og:site_name" content="{{ site.site_name | default: site.github.project_title }}">
+    <meta property="og:title" content="{{ page.title | default: "kb" }}">
+    <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}">
+    <meta name="twitter:image" content="{{ site.github.owner_gravatar_url }}">
+    <meta name="twitter:site" content="@{{ site.twitter.username | replace:"@","" }}">
+    <meta name="twitter:title" content="{{ page.title | default: "kb" }}">
+    <link rel="canonical" href="{{ seo_tag.canonical_url }}">
     {% endunless %}
+
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
