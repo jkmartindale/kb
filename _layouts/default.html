@@ -12,7 +12,7 @@
     {% capture description %}{% if page.title %}{{ page.title }} code{% else %}Code{% endif %} snippets and technical tricks curated by James Martindale.{% endcapture %}
     {% capture title %}{% if page.title %}{{ page.title | append: " // " }}{% endif %}{{ site_name }}{% endcapture %}
     <meta property="description" content="{{ description }}">
-    <meta property="fb:admins" content="100002882356557">
+    <meta property="fb:app_id" content="{{ site.facebook.app_id }}">
     <meta property="og:author" content="{{ site.github.owner.name | default: site.github.owner.login }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ site.github.owner_gravatar_url }}">
