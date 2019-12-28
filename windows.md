@@ -16,3 +16,6 @@ Run this in PowerShell:
 1. Browse through the subkeys until you find one with a value containing the name of the blank entry
 1. Delete it
 1. Reopen Windows Explorer
+
+### Custom Shell Folder Locations
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
