@@ -19,8 +19,14 @@ Run this in PowerShell:
 
 ### Change next screenshot number
 1. Open Registry Editor
-1. Navigate to Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer
+1. Navigate to HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer
 1. Edit `ScreenshotIndex`
 
 ### Custom shell folder locations
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+
+### Skip lock screen
+1. Open Registry Editor
+1. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
+1. Create a new key `Personalization` if it doesn't already exist
+1. Within the `Personalization` key, create a new DWORD value called `NoLockScreen` set to 1.
