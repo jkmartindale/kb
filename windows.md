@@ -29,4 +29,4 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell 
 1. Open Registry Editor
 1. Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 1. Create a new key `Personalization` if it doesn't already exist
-1. Within the `Personalization` key, create a new DWORD value called `NoLockScreen` set to 1.
+1. Within the `Personalization` key, create a new DWORD value called `NoLockScreen` set to 1
