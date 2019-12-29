@@ -17,10 +17,10 @@ Run this in PowerShell:
 1. Delete it
 1. Reopen Windows Explorer
 
-### Change Screenshot Number
+### Change next screenshot number
 1. Open Registry Editor
 1. Navigate to Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer
 1. Edit `ScreenshotIndex`
 
-### Custom Shell Folder Locations
+### Custom shell folder locations
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
