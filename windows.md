@@ -36,3 +36,19 @@ Just pipe it to `clip`, e.g.
 ```cmd
 echo "ok this is epic" | clip
 ```
+
+### Find which process locked a file
+what if you  
+wanted to delete a file  
+but Windows said  
+**This action can't be completed because the file is in use by an application**
+
+1. Download and launch [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+1. Hit Ctrl + F (or go to the **Find** menu and select **Find Handle or DLL...**)
+1. Type in at least part of the filename and hit **Search**
+1. For each process locking the file in question,
+    1. Select the search results entry, which will highlight the process in the main window
+    1. Switch to the main window
+    1. Hit the delete key (or right-click the entry and select **Kill Process**)
+
+Now you should be able to do whatever you wanted to with said file
