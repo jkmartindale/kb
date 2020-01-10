@@ -1,7 +1,7 @@
 # Android
 
 ### Useful Downloads
-- [SDK PlatformTools](https://developer.android.com/studio/releases/platform-tools),
+- [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools),
   because nobody wants to download Android Studio just for adb/fastboot
 - [Universal ADB Drivers](https://adb.clockworkmod.com/)
 
