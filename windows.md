@@ -41,7 +41,7 @@ echo "ok this is epic" | clip
 > what if you  
 > wanted to delete a file  
 > but Windows said  
-> **This action can't be completed because the file is in use by an application**
+> **This action can't be completed because the file is open in another program**
 
 1. Download and launch [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 1. Hit Ctrl + F (or go to the **Find** menu and select **Find Handle or DLL...**)
