@@ -59,3 +59,13 @@ Or if you're in a submodule but want its parent `.git` folder for some reason:
 ```sh
 git rev-parse --show-superproject-working-tree
 ```
+
+### GitHub Atom feeds
+GitHub allows you to watch repositories, which sends you notifiations for new issues, pull requests, and releases.
+But what if you'd like notifications for each commit, or changes to just a directory or single file?
+GitHub publishes Atom feeds for several Git paths:
+- Commits to master: https://github.com/:owner/:repo/commits.atom
+- Commits to a branch: https://github.com/:owner/:repo/commits/:branch.atom
+- Commits to a file or folder: https://github.com/:owner/:repo/commits/path/to/file.atom
+
+Private repositories only offer Atom feeds for commits to a branch, which you can find in the `application/atom+xml` link tag when viewing a branch in your browser.
