@@ -1,4 +1,4 @@
-# Github Pages
+# GitHub Pages
 These entries are written for the GitHub Pages environment but some apply to Jekyll in general.
 
 ### Resources
