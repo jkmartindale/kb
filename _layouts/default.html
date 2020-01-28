@@ -13,6 +13,10 @@
     {% capture description %}{% if page.title %}{{ page.title }} code{% else %}Code{% endif %} snippets and technical tricks curated by James Martindale.{% endcapture %}
     {% capture title %}{% if page.title %}{{ page.title | append: " // " }}{% endif %}{{ site_name }}{% endcapture %}
     <meta property="description" content="{{ description }}">
+    <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}">
+    <meta name="twitter:image" content="{{ site.github.owner_gravatar_url }}">
+    <meta name="twitter:site" content="@{{ site.twitter.username | replace:"@","" }}">
+    <meta name="twitter:title" content="{{ title }}">
     <meta property="fb:app_id" content="{{ site.facebook.app_id }}">
     <meta property="og:author" content="{{ site.github.owner.name | default: site.github.owner.login }}">
     <meta property="og:description" content="{{ description }}">
@@ -22,10 +26,6 @@
     <meta property="og:site_name" content="{{ site_name }}">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}">
-    <meta name="twitter:image" content="{{ site.github.owner_gravatar_url }}">
-    <meta name="twitter:site" content="@{{ site.twitter.username | replace:"@","" }}">
-    <meta name="twitter:title" content="{{ title }}">
     <link rel="canonical" href="{{ canonical_url }}">
     {% endunless %}
 
