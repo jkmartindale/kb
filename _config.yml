@@ -3,6 +3,8 @@ facebook:
 lang: en-us
 optional_front_matter:
   remove_originals: true
+plugins:
+  - jekyll-sitemap
 readme_index:
   remove_originals: true
 show_downloads: false
