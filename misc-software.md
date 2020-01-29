@@ -39,5 +39,5 @@ youtube-dl -f bestvideo+bestaudio https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 Download the best audio and convert it to a file format
 ```
-youtube-dl -f bestaudio -x --file-format flac https://www.youtube.com/watch?v=dQw4w9WgXcQ
+youtube-dl -f bestaudio -x --audio-format flac https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
