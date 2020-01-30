@@ -32,12 +32,7 @@ List available formats for a video
 youtube-dl -F https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
-Download the best video and audio and combine them into one file
-```
-youtube-dl -f bestvideo+bestaudio https://www.youtube.com/watch?v=dQw4w9WgXcQ
-```
-
-Download the best audio and convert it to a file format
+Extract the best audio and convert it if needed
 ```
 youtube-dl -f bestaudio -x --audio-format flac https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
