@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="x9ZZZSFLnSL4MhBn1ii91YiN6NMxNVUjIha-n8Gw-Z4">
+    <style>
+      .markdown-body::before {
+        content: none;
+      }
+    </style>
 
     {% unless page.path == "404.md" %}
     {% capture site_name %}{{ site.site_name | default: site.github.project_title }}{% endcapture %}
