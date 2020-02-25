@@ -1,4 +1,4 @@
-# Axon 7
+# ZTE Axon 7
 
 ### Recoveries
 Bootstacks and recoveries are linked, so make sure you don't mix them up.
