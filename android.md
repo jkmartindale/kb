@@ -17,3 +17,7 @@ on-device terminal emulator or `adb shell` to get the `optauth://` URI:
 ```shell
 sed 's/\\\//\//g; s/.*"\(otpauth\:[^"]*\).*/\1\n/' /data/data/com.valvesoftware.android.steam.community/files/Steamguard-*
 ```
+
+### Favorite Magisk Modules
+- [Foxy Boot](https://github.com/Magisk-Modules-Repo/foxy-boot) - replaces the boot animation with kernel ring buffer skid porn
+- [Smali Patcher](https://forum.xda-developers.com/apps/magisk/module-smali-patcher-0-7-t3680053) - hides mock location status, disables screenshot blocking, disables APK signature verification, disables the high volume warning, and bypasses Samsung KNOX
