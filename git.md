@@ -56,9 +56,14 @@ git filter-branch --force --index-filter \
 - `--prune-empty` removes gross empty commits that can sometimes be generated  
 - `--tag-name-filter cat -- --all` updates the tags you have
 
-Force push your changes on all branches and tags if everything looks right:
+Force push your changes on all branches if everything looks right:
 ```shell
-git push origin --force --all --tags
+git push origin --force --tags
+```
+
+You'll have to update tags separately:
+```shell
+git push origin --force --tags
 ```
 
 Remember that your contributors will now have to rebase. Shame on you.
