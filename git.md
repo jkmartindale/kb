@@ -38,6 +38,31 @@ git fetch origin master
 git reset --hard origin/master
 ```
 
+### Nuke a file
+oopsie woopsie you just commited a fiwle with API keys or something  
+awh!! can't just dewete the fwile in a commit because git has a histowy unu  
+
+This processes the history of every branch and tag, removing the file:
+```shell
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch PATH-TO-FILE-TO-DELETE" \
+  --prune-empty --tag-name-filter cat -- --all
+```
+
+- `--index-filter` will rewrite the Git index without having to check out the entire tree, making it faster than `--tree-filter`  
+- `git rm` tells Git to remove the file (plain `rm` works as well, but `git rm` lets you use `--index-filter`)  
+- `--cached` tells `git rm` to only modify the Git index and to leave your working tree files untouched  
+- `--ignore-unmatch` tells `git rm` not to complain if the file doesn't exist in a commit  
+- `--prune-empty` removes gross empty commits that can sometimes be generated  
+- `--tag-name-filter cat -- --all` updates the tags you have
+
+Force push your changes on all branches and tags if everything looks right:
+```shell
+git push origin --force --all --tags
+```
+
+Remember that your contributors will now have to rebase. Shame on you.
+
 ### Find the .git folder
 Useful for when your classmates aren't paying attention in class, decide that
 they know git better than the professor teaching them git, and then they do an
