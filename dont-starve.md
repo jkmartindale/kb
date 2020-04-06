@@ -19,7 +19,10 @@ style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a
 | <span style="font-weight:bold;color:#E8971E">Reward</span> | N/A | No |
 | <span style="font-weight:bold;color:#EE5D40">Heirloom</span> | N/A | Yes |
 
-### List all players
+### Selecting players
+If you just want to target yourself, you can use `ThePlayer`. Otherwise, you'll
+need to index the `AllPlayers` array. You can figure out which player is at
+which index with:
 ```lua
 c_listAllPlayers()
 ```
