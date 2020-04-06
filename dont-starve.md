@@ -64,3 +64,9 @@ c_supergodmode(ThePlayer)
 
 Both God Mode and Super God Mode are toggled with those commands. While in
 either mode you can't change your stats.
+
+### Move to player
+Using the `AllPlayers` index from `c_listAllPlayers()`:
+```lua
+c_goto(AllPlayers[index])
+```
