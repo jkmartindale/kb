@@ -1,6 +1,6 @@
 # Don't Starve
 
-### Curio Rarity
+### Curio rarity
 The Trade Inn only works for rarities below <span
 style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a
 **Woven** modifier.
@@ -18,3 +18,32 @@ style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a
 | <span style="font-weight:bold;color:#007A4D">Proof of Purchase</span> | N/A | No |
 | <span style="font-weight:bold;color:#E8971E">Reward</span> | N/A | No |
 | <span style="font-weight:bold;color:#EE5D40">Heirloom</span> | N/A | Yes |
+
+### List all players
+```lua
+c_listAllPlayers()
+```
+
+### Set stats
+```lua
+c_sethealth(percent)
+c_sethunger(percent)
+c_setmoisture(percent)
+c_setsanity(percent)
+c_settemperature(degrees)
+```
+
+Or if you prefer to constantly regenerate your hunger:
+```lua
+c_maintainall(ThePlayer)
+c_maintainhealth(ThePlayer)
+c_maintainhunger(ThePlayer)
+c_maintainmoisture(ThePlayer)
+c_maintainsanity(ThePlayer)
+c_maintaintemperature(ThePlayer)
+```
+
+If you want to stop your cheaty regeneration:
+```lua
+c_cancelmaintaintasks(ThePlayer)
+```
