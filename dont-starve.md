@@ -50,3 +50,17 @@ If you want to stop your cheaty regeneration:
 ```lua
 c_cancelmaintaintasks(ThePlayer)
 ```
+
+Or if you hate getting your sanity, hunger, and health drained when being
+attacked, you can use:
+```lua
+c_godmode(ThePlayer)
+```
+
+And if you want to max out your stats as well, use this:
+```lua
+c_supergodmode(ThePlayer)
+```
+
+Both God Mode and Super God Mode are toggled with those commands. While in
+either mode you can't change your stats.
