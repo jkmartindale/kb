@@ -1,6 +1,8 @@
 # Android
 
-### Useful Downloads
+### Useful Links
+- [Edify reference](https://source.android.com/devices/tech/ota/nonab/inside_packages)
+  (scripting language used by `update-binary`)
 - [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools),
   because nobody wants to download Android Studio just for adb/fastboot
 - [Universal ADB Drivers](https://adb.clockworkmod.com/)
