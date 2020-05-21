@@ -15,6 +15,23 @@
   signature verification, disables the high volume warning, and bypasses Samsung
   KNOX
 
+### Force reset PIN
+Assuming the device isn't encrypted, deleting `locksettings.db` is sufficient.
+
+With `adb`:
+```sh
+adb shell su -c "rm /data/system/locksettings.db*"
+```
+
+If a custom recovery is installed, you likely can find your own way to delete
+`locksettings.db` without needing `adb` access.
+
+If the device is encrypted but you have `fastboot` access, you can wipe user
+data as a last resort:
+```sh
+fastboot erase userdata
+```
+
 ### Extract Steam TOTP Secret
 This requires root access.
 
