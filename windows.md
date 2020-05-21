@@ -103,3 +103,14 @@ Stop-Process -Name explorer
 ### Edit spellcheck dictionary
 Navigate to `%APPDATA%\Microsoft\Spelling` and edit the `Default.dic` file under
 the appropriate language.
+
+### Turn Num Lock on/off at startup
+On:
+```powershell
+Set-ItemProperty -Path 'Registry::HKU\.DEFAULT\Control Panel\Keyboard' -Name "InitialKeyboardIndicators" -Value "2"
+```
+
+Off:
+```powershell
+Set-ItemProperty -Path 'Registry::HKU\.DEFAULT\Control Panel\Keyboard' -Name "InitialKeyboardIndicators" -Value "0"
+```
