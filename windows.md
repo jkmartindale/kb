@@ -99,3 +99,7 @@ PowerShell:
 ```powershell
 Stop-Process -Name explorer
 ```
+
+### Edit spellcheck dictionary
+Navigate to `%APPDATA%\Microsoft\Spelling` and edit the `Default.dic` file under
+the appropriate language.
