@@ -1,15 +1,17 @@
 # Miscellaneous Software
 
 ### KeePass Field References
-Fields in one entry can reference fields in other entries, such as when two services might have differing usernames but the same password
-(thanks, university LDAP). Field references can keep multiple fields in sync.
+Fields in one entry can reference fields in other entries, such as when two
+services might have differing usernames but the same password (thanks,
+university LDAP). Field references can keep multiple fields in sync.
 
 The general format:
 ```
 {REF:<FieldCode>@<SearchCode>:<SearchString>}
 ```
 
-`FieldCode` and `SearchCode` are one-letter codes corresponding to the following fields:
+`FieldCode` and `SearchCode` are one-letter codes corresponding to the following
+fields:
 
 | Code | Field |
 | ---- | ----- |
@@ -21,7 +23,8 @@ The general format:
 | I    | UUID |
 | O    | Custom Field (`SearchCode` only) |
 
-`FieldCode` specifies which field to fetch and `SearchCode` and `SearchString` specify which record to fetch from.
+`FieldCode` specifies which field to fetch and `SearchCode` and `SearchString`
+specify which record to fetch from.
 
 For example, my Office 365 entry has a password value of `{REF:P@T:University of Oklahoma}`,
 which references the password of the entry with the title "University of Oklahoma".
