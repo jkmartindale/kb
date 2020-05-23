@@ -10,6 +10,9 @@
 ### Favorite Magisk Modules
 - [Foxy Boot](https://github.com/Magisk-Modules-Repo/foxy-boot) - replaces the
   boot animation with kernel ring buffer skid porn
+- [Magisk Direct Share Disabler](https://github.com/AndroPlus-org/magisk-module-direct-share-disabler) -
+  Removes the annoying "direct share" menu that makes the share sheet take ages
+  to load
 - [Smali Patcher](https://forum.xda-developers.com/apps/magisk/module-smali-patcher-0-7-t3680053) -
   hides mock location status, disables screenshot blocking, disables APK
   signature verification, disables the high volume warning, and bypasses Samsung
