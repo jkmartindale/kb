@@ -29,7 +29,7 @@ specify which record to fetch from.
 For example, my Office 365 entry has a password value of `{REF:P@T:University of Oklahoma}`,
 which references the password of the entry with the title "University of Oklahoma".
 
-### youtube-dl Cheatsheet
+### youtube-dl
 List available formats for a video
 ```
 youtube-dl -F https://www.youtube.com/watch?v=dQw4w9WgXcQ
