@@ -23,3 +23,17 @@ Just like removing a game, adding a game back to your account will restore every
 
 ### See how much money you've given to Gabe Newell
 https://help.steampowered.com/en/accountdata/AccountSpend
+
+### Extract Steam TOTP secret
+This method requires Steam Authenticator to be installed and activated on an
+Android device with root access.
+
+Open `/data/data/com.valvesoftware.android.steam.community/files/Steamguard-*/`
+as a JSON file. The `uri` property contains an `optauth://` URI including the
+secret.
+
+If you have a `sed` installed (e.g. from Busybox), you can run this with an
+on-device terminal emulator or `adb shell` to get the `optauth://` URI:
+```shell
+sed 's/\\\//\//g; s/.*"\(otpauth\:[^"]*\).*/\1\n/' /data/data/com.valvesoftware.android.steam.community/files/Steamguard-*
+```
