@@ -60,8 +60,10 @@ echo "ok this is epic" | clip
 Now you should be able to do whatever you wanted to with said file
 
 ### Install HEVC codec
-Along with the [easy to find paid HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions/9nmzlz57r3t7),
-Microsoft offers a [hidden away free HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq)
+Along with the
+[easy to find paid HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions/9nmzlz57r3t7),
+Microsoft offers a
+[hidden away free HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq)
 that has your hardware manufacturer foot the HEVC licensing bill.
 
 ### Edit the Power User Menu (Win + X)

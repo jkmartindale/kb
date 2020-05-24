@@ -49,10 +49,14 @@ git filter-branch --force --index-filter \
   --prune-empty --tag-name-filter cat -- --all
 ```
 
-- `--index-filter` will rewrite the Git index without having to check out the entire tree, making it faster than `--tree-filter`  
-- `git rm` tells Git to remove the file (plain `rm` works as well, but `git rm` lets you use `--index-filter`)  
-- `--cached` tells `git rm` to only modify the Git index and to leave your working tree files untouched  
-- `--ignore-unmatch` tells `git rm` not to complain if the file doesn't exist in a commit  
+- `--index-filter` will rewrite the Git index without having to check out the
+  entire tree, making it faster than `--tree-filter`  
+- `git rm` tells Git to remove the file (plain `rm` works as well, but `git rm`
+  lets you use `--index-filter`)  
+- `--cached` tells `git rm` to only modify the Git index and to leave your
+  working tree files untouched  
+- `--ignore-unmatch` tells `git rm` not to complain if the file doesn't exist in
+  a commit  
 - `--prune-empty` removes gross empty commits that can sometimes be generated  
 - `--tag-name-filter cat -- --all` updates the tags you have
 
@@ -91,9 +95,10 @@ git rev-parse --show-superproject-working-tree
 ```
 
 ### GitHub Atom feeds
-GitHub allows you to watch repositories, which sends you notifiations for new issues, pull requests, and releases.
-But what if you'd like notifications for each commit, or changes to just a directory or single file?
-GitHub publishes Atom feeds for several Git paths:
+GitHub allows you to watch repositories, which sends you notifications for new
+issues, pull requests, and releases. But what if you'd like notifications for
+each commit, or changes to just a directory or single file? GitHub publishes
+Atom feeds for several Git paths:
 - Commits to master: https://github.com/:owner/:repo/commits.atom
 - Commits to a branch: https://github.com/:owner/:repo/commits/:branch.atom
 - Commits to a file or folder: https://github.com/:owner/:repo/commits/path/to/file.atom
