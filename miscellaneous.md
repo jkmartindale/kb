@@ -1,4 +1,4 @@
-# Miscellaneous Software
+# Miscellaneous
 
 ### KeePass field references
 Fields in one entry can reference fields in other entries, such as when two
