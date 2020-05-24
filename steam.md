@@ -20,3 +20,6 @@ If you change your mind and want the game back,
 1. Select **Restore the previously removed package to my account**
 
 Just like removing a game, adding a game back to your account will restore everything in the package.
+
+### Figure out how much you've given to Gabe Newell
+https://help.steampowered.com/en/accountdata/AccountSpend
