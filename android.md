@@ -35,6 +35,19 @@ data as a last resort:
 fastboot erase userdata
 ```
 
+### Change default screen orientation
+Run this either on the device or through `adb shell`:
+```sh
+content insert --uri content://settings/system --bind name:s:user_rotation --bind value:i:x
+```
+where x is:
+| Orientation          |  x  |
+| -------------------- | --- |
+| Portrait             |  0  |
+| Landscape            |  1  |
+| Upside-down portrait |  2  |
+| Reverse landscape    |  3  |
+
 ### Extract Steam TOTP Secret
 This requires root access.
 
