@@ -1,13 +1,13 @@
 # Android
 
-### Useful Links
+### Useful links
 - [Edify reference](https://source.android.com/devices/tech/ota/nonab/inside_packages)
   (scripting language used by `update-binary`)
 - [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools),
   because nobody wants to download Android Studio just for adb/fastboot
 - [Universal ADB Drivers](https://adb.clockworkmod.com/)
 
-### Favorite Magisk Modules
+### Favorite Magisk modules
 - [Foxy Boot](https://github.com/Magisk-Modules-Repo/foxy-boot) - replaces the
   boot animation with kernel ring buffer skid porn
 - [Magisk Direct Share Disabler](https://github.com/AndroPlus-org/magisk-module-direct-share-disabler) -
@@ -48,7 +48,7 @@ where x is:
 | Upside-down portrait |  2  |
 | Reverse landscape    |  3  |
 
-### Extract Steam TOTP Secret
+### Extract Steam TOTP secret
 This requires root access.
 
 Open `/data/data/com.valvesoftware.android.steam.community/files/Steamguard-*/`

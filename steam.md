@@ -21,5 +21,5 @@ If you change your mind and want the game back,
 
 Just like removing a game, adding a game back to your account will restore everything in the package.
 
-### Figure out how much you've given to Gabe Newell
+### See how much money you've given to Gabe Newell
 https://help.steampowered.com/en/accountdata/AccountSpend

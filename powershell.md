@@ -12,7 +12,7 @@ You'll most likely provide a date in `YYYY,MM,DD` or `YYYY,MM,DD,HH,MM,SS` forma
 ```
 Where `.\ngl-pretty-sus.rar` is the filepath to the file to hash. Algorithms supported are SHA1, SHA256, (default), SHA384, SHA512, and MD5.
 
-## Split String on a String
+## Split string on a string
 `String.Split()` works on just a single character, but the
 [`-Split` operator](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_split)
 uses regular expressions by default.
