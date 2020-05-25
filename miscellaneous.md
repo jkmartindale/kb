@@ -43,6 +43,32 @@ text a link (VoIP numbers unsupported) to a webpage that asks you to type in the
 numbers on your screen. You could do the same thing over the phone in the same
 amount of time.
 
+### Spotify search syntax
+Spotify supposedly supports literal searches with quotes, though Spotify will
+still treat quoted content as a substring.
+
+Spotify has traditional Boolean operators OR, AND (+), and NOT (-), with AND
+being the default (because it's no longer 1998).
+
+**&** is treated as a literal, so don't search for a song by multiple artists
+with `artist1 & artist2`, just remove the `&`.
+
+Spotify supports a number of search operators, some no longer documented. For
+passing content with spaces to an operator, use quotes (e.g. `genre:"Rock &
+Roll"`).
+
+| Operator  | Description |
+| --------- | ----------- |
+| `album:`  | Album name |
+| `artist:` | Artist name |
+| `label:`  | Record label |
+| `genre:`  | [List of genres](http://everynoise.com/everynoise1d.cgi?scope=all) |
+| `isrc:`   | International Standard Recording Code |
+| `tag:new` | "Recently added" |
+| `track:`  | Track name |
+| `upc:`    | Universal Product Code |
+| `year:`   | Year or year range |
+
 ### youtube-dl
 List available formats for a video
 ```
