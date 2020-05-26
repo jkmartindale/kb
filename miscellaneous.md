@@ -69,6 +69,10 @@ Roll"`).
 | `upc:`    | Universal Product Code |
 | `year:`   | Year or year range |
 
+### Telegram: find replies
+Search for `#m`. You can filter to a single conversation but you can't filter by
+sender or additional keywords.
+
 ### youtube-dl
 List available formats for a video
 ```
