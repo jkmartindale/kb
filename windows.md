@@ -1,5 +1,12 @@
 # Windows
 
+### Useful utilities
+- [EdgeDeflector](https://github.com/da2x/EdgeDeflector) - redirect web searches
+  from Windows Search to your preferred browser instead of Edge
+- [HEVC
+  codecs](https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq)
+  free from Microsoft, just hidden
+
 ### Shortcut to Windows Store app
 Open the Applications folder, by typing `shell:AppsFolder` into the Windows
 Explorer address bar or the Run dialog.
@@ -58,13 +65,6 @@ echo "ok this is epic" | clip
     1. Hit the delete key (or right-click the entry and select **Kill Process**)
 
 Now you should be able to do whatever you wanted to with said file
-
-### Install HEVC codec
-Along with the
-[easy to find paid HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions/9nmzlz57r3t7),
-Microsoft offers a
-[hidden away free HEVC codec](https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq)
-that has your hardware manufacturer foot the HEVC licensing bill.
 
 ### Edit the Power User Menu (Win + X)
 The Power User Menu is located at `%LocalAppData%\Microsoft\Windows\WinX`. Its
