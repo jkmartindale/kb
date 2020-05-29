@@ -41,6 +41,7 @@ Run this either on the device or through `adb shell`:
 content insert --uri content://settings/system --bind name:s:user_rotation --bind value:i:x
 ```
 where x is:
+
 | Orientation          |  x  |
 | -------------------- | --- |
 | Portrait             |  0  |
