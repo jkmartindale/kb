@@ -6,6 +6,8 @@
 - [HEVC
   codecs](https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq)
   free from Microsoft, just hidden
+- [Sandboxie](https://www.sandboxie.com/DownloadSandboxie) - lightweight
+  sandbox, especially good for analyzing application installers
 
 ### Shortcut to Windows Store app
 Open the Applications folder, by typing `shell:AppsFolder` into the Windows
