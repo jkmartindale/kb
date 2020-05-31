@@ -124,6 +124,7 @@ Start tiles for desktop apps are defined in
 `appname.VisualElementsManifest.xml`, where `appname` is the filename your tile
 points to, without the extension. This works for `appname.exe` but also things
 like `appname.txt` or whatever you want. Store it next to the shortcut target.
+If there are any errors in the XML, the entire file is ignored.
 
 The XML looks like this:
 ```xml
@@ -165,7 +166,13 @@ constants:
 `ShowNameOnSquare150x150Logo` is either "on" or "off"
 
 Tile image constraints:
-- You must define no images or both, otherwise the entire XML file is ignored
+- You must define no images or both, defining just one is an error
 - Maximum dimensions of 1024x1024
 - Maximum file size of 200 KB
 - Extension of .gif, .jpg, .jpeg, or .png
+
+To see the new tile, update the shortcut file. Changing its date modified is
+enough:
+```powershell
+(ls "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\appname.lnk").LastWriteTime = Get-Date
+```
