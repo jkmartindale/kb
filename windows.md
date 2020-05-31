@@ -118,3 +118,54 @@ Off:
 ```powershell
 Set-ItemProperty -Path 'Registry::HKU\.DEFAULT\Control Panel\Keyboard' -Name "InitialKeyboardIndicators" -Value "0"
 ```
+
+### Start tiles for desktop apps
+Start tiles for desktop apps are defined in
+`appname.VisualElementsManifest.xml`, where `appname` is the filename your tile
+points to, without the extension. This works for `appname.exe` but also things
+like `appname.txt` or whatever you want. Store it next to the shortcut target.
+
+The XML looks like this:
+```xml
+<Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <VisualElements
+        BackgroundColor="#FF0000"
+        ForegroundText="light"
+        ShowNameOnSquare150x150Logo="on"
+        Square70x70Logo="path\to\something.png"
+        Square150x150Logo="path\to\something.png"
+    />
+</Application>
+```
+
+All attributes are required except `Square150x150Logo` and `Square70x70Logo`.
+
+`BackgroundColor` also applies to the background of the application icon shown
+in **All Apps**. It can be an RGB hex string or one of these predefined
+constants:
+- black
+- silver
+- gray
+- white
+- maroon
+- red
+- purple
+- fuchsia
+- green
+- lime
+- olive
+- yellow
+- navy
+- blue
+- teal
+- aqua
+
+`ForegroundText` is either "light" or "dark"
+
+`ShowNameOnSquare150x150Logo` is either "on" or "off"
+
+Tile image constraints:
+- You must define no images or both, otherwise the entire XML file is ignored
+- Maximum dimensions of 1024x1024
+- Maximum file size of 200 KB
+- Extension of .gif, .jpg, .jpeg, or .png
