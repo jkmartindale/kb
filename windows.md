@@ -186,7 +186,10 @@ The easiest approach to overriding DPI scaling is to make a new subkey
 `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution
 Options\executable.exe`, where `executable.exe` is the filename of the
 executable (duh). Add a DWORD value called `dpiAwareness` with the data `0`, and
-Windows will now scale the application.
+Windows will now scale the application. This registry key is primarily for
+attaching a debugger to an executable no matter how it's run, but it can change
+a few other aspects of how the executable runs like Exploit Guard mitigation
+options or, thankfully, DPI scaling.
 
 This will apply to every executable with that filename, so in the rare case that
 doesn't work out for you, you can use an external application manifest. First,
