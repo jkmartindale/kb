@@ -236,3 +236,7 @@ Copy the manifest into an XML file called `filename.exe.manifest` and change the
 In order for Windows to recognize the external manifest, open
 `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide`. Make a new DWORD
 value called `PreferExternalManifest` with the data `1`.
+
+Or if you're feeling more adventurous, you could skip `PreferExternalManifest`
+and use a tool like [Resource Hacker](http://www.angusj.com/resourcehacker/) to
+overwrite the embedded application manifest directly.
