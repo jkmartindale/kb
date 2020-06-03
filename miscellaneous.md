@@ -73,6 +73,47 @@ Roll"`).
 Search for `#m`. You can filter to a single conversation but you can't filter by
 sender or additional keywords.
 
+### Twitter search operators
+| Operator | Finds tweets... |
+| -------- | --------------- |
+| bruh moment | containing both "bruh" and "moment" |
+| "bruh moment" | containing the exact phrase "bruh moment" |
+| bruh OR moment | containing either "bruh" or "moment" or both |
+| bruh -moment | containing "bruh" but not "moment |
+| #bruhmoment | containing the hashtag #bruhmoment |
+| from:jkmartindale | sent from [@jkmartindale](https://twitter.com/jkmartindale) |
+| to:jkmartindale | sent as a reply to @jkmartindale |
+| @jkmartindale | replying to or mentioning @jkmartindale |
+| near:"New York" | sent near New York |
+| within:15mi | within a 15-mile radius (requires near:) |
+| since:2017-01-17 | sent on or after 2017-01-17 |
+| until:2023-01-17 | sent before 2020-01-17 |
+| :) | with positive sentiment |
+| :( | with negative sentiment |
+| filter:hashtags | with at least one hashtag |
+| filter:images | containing photos or "GIFs" (filter:twimg is an alias) |
+| filter:links | containing links or media |
+| filter:media | containing photos, video, or "GIFs" |
+| filter:mentions | mentioning or replying to anyone |
+| filter:native_video | containing videos uploaded directly to Twitter |
+| filter:periscope | containing Periscope URLs |
+| filter:safe | that are not marked as potentially sensitive content |
+| filter:verified | sent from verified accounts |
+| filter:videos | containing uploaded video or links to videos |
+| filter:vine | containing a link to a Vine |
+| lang:und | in an unidentified language [[list of supported languages]](https://developer.twitter.com/en/docs/tweets/search/guides/premium-operators) |
+| url:jkmartindale | with URLs containing "jkmartindale" |
+| source:"Twitter for HomePod" | sent from the client "Twitter for HomePod" (not standalone) |
+
+`?` is officially an operator for finding questions but it seems to be based on
+literal matching of a question mark, not intent analysis.
+
+`-filter:retweets` is supposed to filter out retweets, though retweets no longer
+show up in search results. `filter:retweets` matches "RT" anywhere in the tweet.
+
+According to Twitter documentation `filter:images` matches links identified as
+photos, but this is no longer the case.
+
 ### youtube-dl
 List available formats for a video
 ```
