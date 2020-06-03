@@ -176,3 +176,60 @@ enough:
 ```powershell
 (ls "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\appname.lnk").LastWriteTime = Get-Date
 ```
+
+### Override DPI scaling for system apps
+System applications don't provide a **Compatibility** tab in their properties
+window and ignore keys in `HKCU\Software\Microsoft\Windows
+NT\CurrentVersion\AppCompatFlags\Layers`.
+
+The easiest approach to overriding DPI scaling is to make a new subkey
+`HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution
+Options\executable.exe`, where `executable.exe` is the filename of the
+executable (duh). Add a DWORD value called `dpiAwareness` with the data `0`, and
+Windows will now scale the application.
+
+This will apply to every executable with that filename, so in the rare case that
+doesn't work out for you, you can use an external application manifest. First,
+you'll want to find the old manifest, which can be easily done by opening the
+executable in a text editor. The manifest is embedded as plain text so it's easy
+to spot:
+```xml
+□M□U□I□<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright (c) Microsoft Corporation -->
+<assembly 
+    xmlns="urn:schemas-microsoft-com:asm.v1" 
+    xmlns:asmv3="urn:schemas-microsoft-com:asm.v3"
+    manifestVersion="1.0"
+    >
+<assemblyIdentity
+    version="5.1.0.0"
+    processorArchitecture="amd64"
+    name="Microsoft.Windows.Help.HH"
+    type="win32"
+/>
+<description>Microsoft HTML Help Executable</description>
+
+<trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+        <requestedPrivileges>
+            <requestedExecutionLevel
+                level="asInvoker"
+                uiAccess="false"
+            />
+        </requestedPrivileges>
+    </security>
+</trustInfo>
+    <asmv3:application>
+        <asmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+            <dpiAware>true</dpiAware>
+        </asmv3:windowsSettings>
+    </asmv3:application>
+</assembly>
+```
+
+Copy the manifest into an XML file called `filename.exe.manifest` and change the
+`<dpiAware>` tag to `false`. Save it next to the original executable.
+
+In order for Windows to recognize the external manifest, open
+`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide`. Make a new DWORD
+value called `PreferExternalManifest` with the data `1`.
