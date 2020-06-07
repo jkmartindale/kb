@@ -19,3 +19,15 @@ supported are SHA1, SHA256, (default), SHA384, SHA512, and MD5.
 `String.Split()` works on just a single character, but the
 [`-Split` operator](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_split)
 uses regular expressions by default.
+
+### Remove line from files
+```powershell
+Get-ChildItem "path\to\folder" -Filter *.htm | 
+Foreach-Object {
+    $content = Get-Content $_.FullName # Temp variable needed to prevent simultaneous access
+    $content | Select-String -SimpleMatch 'String you want to remove' -NotMatch | Set-Content $_.FullName
+}
+```
+
+You can also swap `-SimpleMatch` with `-Pattern` if you want to use regular
+expressions.
