@@ -19,7 +19,7 @@ Bootstacks and recoveries are linked, so make sure you don't mix them up.
 ### Pixel Experience (Unofficial)
 Device-specific ROM based on AOSP and special GApps. **Doesn't support encryption.**
 
-1. Use [PARTY](https://forum.xda-developers.com/axon-7/development/tool-party-v0-1-vendor-partition-t3831517) to create a vendor partition if one doesn't aready exist
+1. Use [PARTY](https://forum.xda-developers.com/axon-7/development/tool-party-v0-1-vendor-partition-t3831517) to create a vendor partition if one doesn't already exist
 1. Wipe system, data, cache, and Dalvik/ART cache
 1. Install the LineageOS 15 Universal bootstack by DrakenFX if you have a different bootstack
 1. Flash the corresponding modem if you haven't already

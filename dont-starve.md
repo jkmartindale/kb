@@ -57,7 +57,7 @@ And if you want to max out your stats as well, use this:
 c_supergodmode(ThePlayer)
 ```
 
-Both God Mode and Super God Mode are toggled with those commands. While in either mode you can't change your stats.
+Both God Mode and Super God Mode are toggled by their respective commands. While in either mode you can't change your stats.
 
 ### Move to player
 Using the `AllPlayers` index from `c_listAllPlayers()`:

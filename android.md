@@ -18,7 +18,7 @@ With `adb`:
 adb shell su -c "rm /data/system/locksettings.db*"
 ```
 
-If a custom recovery is installed, you likely can find your own way to delete `locksettings.db` without needing `adb` access.
+If a custom recovery is installed, you can find your own way to delete `locksettings.db` without needing `adb` access.
 
 If the device is encrypted but you have `fastboot` access, you can wipe user data as a last resort:
 ```sh
