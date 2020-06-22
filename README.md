@@ -3,7 +3,7 @@
 
 Knowledgebase of code snippets and technical tricks.
 
-You can browse repository contents here on GitHub.com, but https://jkmartindale.github.io/kb is nicer.
+You can browse repository contents here on GitHub.com, but https://kb.jkmartindale.dev is nicer.
 <!--{% endcomment %}-->
 {% comment %}
 <!--{% endcomment %}
