@@ -2,6 +2,9 @@
 
 ### Useful links
 - [Edify reference](https://source.android.com/devices/tech/ota/nonab/inside_packages) (scripting language used by `update-binary`)
+- [EdXposed](https://github.com/ElderDrivers/EdXposed), an ART hooking framework for Android 8+ implementing the Xposed API (requires Magisk and Riru)
+- [EdXposed Manager](https://github.com/ElderDrivers/EdXposedManager/releases), companion app for EdXposed
+- [Magisk](https://github.com/topjohnwu/Magisk/releases)
 - [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools), because nobody wants to download Android Studio just for adb/fastboot
 - [Universal ADB Drivers](https://adb.clockworkmod.com/)
 
