@@ -6,18 +6,14 @@ git reset --hard HEAD~n
 ```
 
 ### Move commits to another branch
-First, actually make the branch you were supposed to use (but don't switch
-to it).
+First, actually make the branch you were supposed to use (but don't switch to it).
 ```shell
 git branch chores/fix-my-sins
 ```
 
-Now the new branch points to the former `HEAD` of master (or whatever the
-wrong branch was). You'll want to move the `HEAD` of the current branch back
-however many commits (let's say 4).
+Now the new branch points to the former `HEAD` of master (or whatever the wrong branch was). You'll want to move the `HEAD` of the current branch back however many commits (let's say 4).
 
-Of course, if you do that you might lose uncommitted changes you've made, so
-that's why `--keep` is a thing.
+Of course, if you do that you might lose uncommitted changes you've made, so that's why `--keep` is a thing.
 
 ```shell
 # Change 4 to however many mistakes/commits you managed to make
@@ -49,14 +45,10 @@ git filter-branch --force --index-filter \
   --prune-empty --tag-name-filter cat -- --all
 ```
 
-- `--index-filter` will rewrite the Git index without having to check out the
-  entire tree, making it faster than `--tree-filter`  
-- `git rm` tells Git to remove the file (plain `rm` works as well, but `git rm`
-  lets you use `--index-filter`)  
-- `--cached` tells `git rm` to only modify the Git index and to leave your
-  working tree files untouched  
-- `--ignore-unmatch` tells `git rm` not to complain if the file doesn't exist in
-  a commit  
+- `--index-filter` will rewrite the Git index without having to check out the entire tree, making it faster than `--tree-filter`  
+- `git rm` tells Git to remove the file (plain `rm` works as well, but `git rm` lets you use `--index-filter`)  
+- `--cached` tells `git rm` to only modify the Git index and to leave your working tree files untouched  
+- `--ignore-unmatch` tells `git rm` not to complain if the file doesn't exist in a commit  
 - `--prune-empty` removes gross empty commits that can sometimes be generated  
 - `--tag-name-filter cat -- --all` updates the tags you have
 
@@ -73,11 +65,7 @@ git push origin --force --tags
 Remember that your contributors will now have to rebase. Shame on you.
 
 ### Find the .git folder
-Useful for when your classmates aren't paying attention in class, decide that
-they know git better than the professor teaching them git, and then they do an
-oopsie woopsie and make nested git repositories (that aren't submodules). This
-usually ends up with them having an undesired repository active in their current
-working directory, and they want it to stop.
+Useful for when your classmates aren't paying attention in class, decide that they know git better than the professor teaching them git, and then they do an oopsie woopsie and make nested git repositories (that aren't submodules). This usually ends up with them having an undesired repository active in their current working directory, and they want it to stop.
 
 Find the `.git` directory for the undesired repository
 ```shell
@@ -95,10 +83,7 @@ git rev-parse --show-superproject-working-tree
 ```
 
 ### GitHub Atom feeds
-GitHub allows you to watch repositories, which sends you notifications for new
-issues, pull requests, and releases. But what if you'd like notifications for
-each commit, or changes to just a directory or single file? GitHub publishes
-Atom feeds for several Git paths:
+GitHub allows you to watch repositories, which sends you notifications for new issues, pull requests, and releases. But what if you'd like notifications for each commit, or changes to just a directory or single file? GitHub publishes Atom feeds for several Git paths:
 - Commits to master: https://github.com/:owner/:repo/commits.atom
 - Commits to a branch: https://github.com/:owner/:repo/commits/:branch.atom
 - Commits to a file or folder: https://github.com/:owner/:repo/commits/path/to/file.atom

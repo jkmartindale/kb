@@ -1,9 +1,7 @@
 # Don't Starve
 
 ### Curio rarity
-The Trade Inn only works for rarities below <span
-style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a
-**Woven** modifier.
+The Trade Inn only works for rarities below <span style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a **Woven** modifier.
 
 | Rarity | Drop Rate | Marketable? |
 | ------ | --------- | ----------- |
@@ -20,9 +18,7 @@ style="font-wight:bold;color:#BD4646">Elegant</span> and nothing with a
 | <span style="font-weight:bold;color:#EE5D40">Heirloom</span> | N/A | Yes |
 
 ### Selecting players
-If you just want to target yourself, you can use `ThePlayer`. Otherwise, you'll
-need to index the `AllPlayers` array. You can figure out which player is at
-which index with:
+If you just want to target yourself, you can use `ThePlayer`. Otherwise, you'll need to index the `AllPlayers` array. You can figure out which player is at which index with:
 ```lua
 c_listAllPlayers()
 ```
@@ -51,8 +47,7 @@ If you want to stop your cheaty regeneration:
 c_cancelmaintaintasks(ThePlayer)
 ```
 
-Or if you hate getting your sanity, hunger, and health drained when being
-attacked, you can use:
+Or if you hate getting your sanity, hunger, and health drained when being attacked, you can use:
 ```lua
 c_godmode(ThePlayer)
 ```
@@ -62,8 +57,7 @@ And if you want to max out your stats as well, use this:
 c_supergodmode(ThePlayer)
 ```
 
-Both God Mode and Super God Mode are toggled with those commands. While in
-either mode you can't change your stats.
+Both God Mode and Super God Mode are toggled with those commands. While in either mode you can't change your stats.
 
 ### Move to player
 Using the `AllPlayers` index from `c_listAllPlayers()`:
