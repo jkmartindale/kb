@@ -58,6 +58,7 @@ Spotify supports a number of search operators, some no longer documented. For pa
 Search for `#m`. You can filter to a single conversation but you can't filter by sender or additional keywords.
 
 ### Twitter search operators
+
 | Operator | Finds tweets... |
 | -------- | --------------- |
 | bruh moment | containing both "bruh" and "moment" |
