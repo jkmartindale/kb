@@ -25,3 +25,9 @@ Foreach-Object {
 ```
 
 You can also swap `-SimpleMatch` with `-Pattern` if you want to use regular expressions.
+
+### View function source code
+```
+${function:Get-FileHash}
+```
+`Function:` is a virtual volume full of strings.
